@@ -1,0 +1,11 @@
+﻿@model MvcMovie.Models.Movie
+
+<h2>Movie Details</h2>
+<div>
+    <h4>@Model.Title</h4>
+    <p><strong>Released:</strong> @Model.ReleaseDate.ToShortDateString()</p>
+    <p><strong>Genre:</strong> @Model.Genre</p>
+    <p><strong>Price:</strong> @Model.Price.ToString("C")</p>
+    <p><strong>Rating:</strong> @Model.Rating</p>
+</div>
+<p><a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> | <a asp-action="Index">Back to List</a></p>
